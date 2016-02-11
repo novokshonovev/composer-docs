@@ -1,12 +1,12 @@
 Оригинал: https://getcomposer.org/doc/01-basic-usage.md
 
 1. [Вступление](#Вступление)
-2. [Файл настройки проекта: composer.json](#Файл-настройки-проекта:-composer.json)
-    * [Зависимости: свойство require](#Зависимости:-свойство-require)
+2. [Файл настройки проекта: composer.json](#Файл-настройки-проекта-composerjson)
+    * [Зависимости: свойство require](#Зависимости-свойство-require)
     * [Имена пакетов](#Имена-пакетов)
     * [Версии пакетов](#Версии-пакетов)
     * [Стабильность](#Стабильность)
-3. [Файл блокировки: composer.lock](#Файл-блокировки:-composer.lock)
+3. [Файл блокировки: composer.lock](#Файл-блокировки-composerlock)
 4. [Packagist](#Packagist)
 5. [Автозагрузка](#Автозагрузка)
 
@@ -113,7 +113,7 @@ require __DIR__ . '/vendor/autoload.php';
 Это позволяет действительно легко подключать чужой код к проекту. 
 
 You can even add your own code to the autoloader by adding an autoload field to composer.json.
-Можно даже добавить собственный код автозагрузчика через свойство `[autoload(original)](https://getcomposer.org/doc/04-schema.md#autoload)` файла composer.json: 
+Можно даже добавить собственный код автозагрузчика через свойство [`autoload`(original)](https://getcomposer.org/doc/04-schema.md#autoload) файла composer.json: 
 ```json
 {
     "autoload": {
@@ -127,7 +127,7 @@ Composer зарегистрирует [PSR-4](http://www.php-fig.org/psr/psr-4/)
 В примере определяется соответсвие между пространством имен и директорией.   
 Директория `src` должна располагаться в корне вашего проекта на том же уровне что и директория `vendor`.
 
-После добавления свойства `[autoload(original)](https://getcomposer.org/doc/04-schema.md#autoload)` необходимо выполнить команду [`dump-autoload`(original)](https://getcomposer.org/doc/03-cli.md#dump-autoload) для обновления файла autoload.php.
+После добавления свойства [`autoload`(original)](https://getcomposer.org/doc/04-schema.md#autoload) необходимо выполнить команду [`dump-autoload`(original)](https://getcomposer.org/doc/03-cli.md#dump-autoload) для обновления файла autoload.php.
 
 Кроме того включение файла автозагрузки вернет объект автозагрузчика через который можно добавить в автозагрузку другие пространства имен.
 Это может быть полезно, например. при организации тестирования:
@@ -136,6 +136,6 @@ $loader = require __DIR__ . '/vendor/autoload.php';
 $loader->add('Acme\\Test\\', __DIR__);
 ```
 
-Кроме автозагрузки по стандарту PSR-4 Composer так же поддерживает автозагрузку по стандарту PSR-0, автозагрузку по спискам классов (classmap) and файлов. Подробнее автозагрузка рассмотрена в `[autoload(original)](https://getcomposer.org/doc/04-schema.md#autoload)`.
+Кроме автозагрузки по стандарту PSR-4 Composer так же поддерживает автозагрузку по стандарту PSR-0, автозагрузку по спискам классов (classmap) and файлов. Подробнее автозагрузка рассмотрена в [`autoload`(original)](https://getcomposer.org/doc/04-schema.md#autoload).
 
 >Замечание: Composer имеет встроенный автозагрузчик. Для использования другого автозагрузчика можно выполнить включение файлов `vendor/composer/autoload_*.php`, которые вернут ассоциативные массивы для настройки автозагрузки.
