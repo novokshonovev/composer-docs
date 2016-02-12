@@ -127,7 +127,7 @@ Composer зарегистрирует [PSR-4](http://www.php-fig.org/psr/psr-4/)
 В примере определяется соответсвие между пространством имен и директорией.   
 Директория `src` должна располагаться в корне вашего проекта на том же уровне что и директория `vendor`.
 
-После добавления свойства [`autoload`(original)](https://getcomposer.org/doc/04-schema.md#autoload) необходимо выполнить команду [`dump-autoload`(original)](https://getcomposer.org/doc/03-cli.md#dump-autoload) для обновления файла autoload.php.
+После добавления свойства [`autoload`](04-schema.md#autoload) необходимо выполнить команду [`dump-autoload`(original)](https://getcomposer.org/doc/03-cli.md#dump-autoload) для обновления файла autoload.php.
 
 Кроме того включение файла автозагрузки вернет объект автозагрузчика через который можно добавить в автозагрузку другие пространства имен.
 Это может быть полезно, например. при организации тестирования:
