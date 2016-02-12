@@ -12,7 +12,7 @@ We have a JSON schema that documents the format and can also be used to validate
 In fact, it is used by the validate command. 
 You can find it at: res/composer-schema.json.
 
-##Корневой пакет
+## Корневой пакет
 
 Корневой пакет это пакет определяемый файлом composer.json в корневой директории проекта. Это главный файл composer.json который определяет все зависимости проекта. 
  
@@ -20,6 +20,7 @@ You can find it at: res/composer-schema.json.
 
 >Замечание: Один и тот же пакет в различных контекстах может быть, а может и не быть корневым. Например, если проект зависит от библиотеки `monolog` - в этом контексте корневым является пакет проекта. Однако, например, при клонировании пакета `monolog` c GitHub для исправления бага, корневым будет считаться пакет `monolog` (скопированный). 
 
+## Свойства (поля)
 >ПРОПУСК
 
 ### autoload
